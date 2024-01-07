@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="alertDesign.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="messageContainer">
+
+            <div>
+                <img src="icon-success.svg" alt="the ">
+            </div>
+            <div>
+                <h2>Thanks for subscribing!</h2>
+            </div>
+            <div>
+                <p>A confirmation email has been sent to <span id="emailName"><strong></strong></span>
+                please open it and click the button made to confirm your subscription.</p>
+            </div>
+            <div>
+                <a href="index.html"><button id="dismissBtn">Dismiss message</button></a>
+            </div>
+
+        </div>
+    <script src="form.js"></script>
+    <script>
+        const emailName = document.querySelector("#emailName");
+        const pushEmail = localStorage.getItem("theEmail");
+        // console.log(pushEmail);
+        emailName.textContent = pushEmail;
+        
+    </script>
+    </div>
+
+    
+</body>
+</html>
